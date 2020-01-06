@@ -20,9 +20,6 @@ axios(url).then(response => {
 
   async function printCsv(data) {
     await new ObjectsToCsv(data).toDisk('./data.csv')
-    console.log(
-      await new ObjectsToCsv(data).toString()
-    );
   }
   printCsv(data);
 }).catch(console.error)
